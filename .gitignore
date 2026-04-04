@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+ready_videos_advanced/
+temp_images/
+*.mp4
+*.mp3
