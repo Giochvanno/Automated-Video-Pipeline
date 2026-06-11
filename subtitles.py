@@ -14,7 +14,7 @@ model = whisper.load_model("base")
 def create_karaoke_clips(audio_path, font_path):
     print(f" Whisper начинает слушать: {audio_path}...")
     
-    # --- ОТЛАДКА ШРИФТА ---
+    # ОТЛАДКА ШРИФТА 
     # Мы выводим в консоль то, что пришло из Factory.
     print(f"\n [SUBTITLES.PY] Получен шрифт: '{font_path}'")
     
