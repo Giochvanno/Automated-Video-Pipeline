@@ -2,9 +2,9 @@ import g4f
 import time
 import random
 
-# ==========================================
+
 # БАЗОВАЯ УТИЛИТА СВЯЗИ
-# ==========================================
+
 def ask_gpt(prompt):
     models_chain = [g4f.models.gpt_4, g4f.models.default]
     for model in models_chain:
@@ -20,9 +20,9 @@ def ask_gpt(prompt):
     return None
 
 
-# ==========================================
+
 # АВТО-ЛОР (САМООБУЧАЮЩИЙСЯ СЦЕНАРИСТ)
-# ==========================================
+
 def get_ai_quotes(topic, mode="lore", count=4):
     print(f" Brain: Изучаю лор и пишу сценарий ({count} фактов) про '{topic}'...")
 
@@ -65,9 +65,9 @@ def get_ai_quotes(topic, mode="lore", count=4):
     return clean_quotes[:count]
 
 
-# ==========================================
+
 #  АВТО-РЕСЕРЧЕР ВИЗУАЛА (ВМЕСТО СЛОВАРЕЙ)
-# ==========================================
+
 def get_dynamic_visual_lore(topic):
     """Заставляет ИИ вспомнить внешность монстра перед тем, как рисовать."""
     print(f"  Ищу внешность '{topic}' в базе данных...")
@@ -85,9 +85,9 @@ def get_dynamic_visual_lore(topic):
         return f"A terrifying, distorted, hyper-realistic horror entity known as {topic}."
 
 
-# ==========================================
+
 #  РЕЖИССЁР (СБОРКА ТЗ ДЛЯ FLUX)
-# ==========================================
+
 def get_director_instruction(script_line, topic):
     # 1. Получаем внешность монстра динамически!
     monster_visual = get_dynamic_visual_lore(topic)
@@ -132,9 +132,9 @@ def get_director_instruction(script_line, topic):
     print(f" Director: ...{clean_prompt[:30]}...")
     return clean_prompt
 
-# ==========================================
+
 #  ТЕСТОВЫЙ ПОЛИГОН (ЗАПУСК БЕЗ РЕНДЕРА)
-# ==========================================
+
 if __name__ == "__main__":
     print("\n" + "="*40)
     print(" ЗАПУСК ИЗОЛИРОВАННОГО ТЕСТА BRAIN 2.0 ")
